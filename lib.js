@@ -1,11 +1,11 @@
-library = [
+let library = [
     { id: 1, title: "1984", author: "George Orwell", read: false },
     { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee", read: true },
     { id: 3, title: "The Great Gatsby", author: "F. Scott Fitzgerald", read: false },
 ]
 
 function displayBooks() {
-    bookList = document.getElementById("bookList");
+    let bookList = document.getElementById("bookList");
     bookList.innerHTML = "";
     library.forEach(book => {
         const div = document.createElement("div");
@@ -21,9 +21,9 @@ function displayBooks() {
 }
 
 function addBook(){
-    title = document.getElementById("title").value;
-    author = document.getElementById("author").value;
-    read = document.getElementById("read").checked;
+    let title = document.getElementById("title").value;
+    let author = document.getElementById("author").value;
+    let read = document.getElementById("read").checked;
     if (title && author) {
         const newBook = {
             id: library.length + 1,
